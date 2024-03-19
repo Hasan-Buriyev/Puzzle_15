@@ -1,8 +1,13 @@
 package Project.Puzzle_15;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.*;
 
 public class Utils {
+    private final String url="D:/Project in java/Modullar/Lesson_4/src/Project/Puzzle_15>";
+    private  final LocalDate date;
     private static final Scanner scanNum = new Scanner(System.in);
     private static final Scanner scanStr = new Scanner(System.in);
     private static List<Puz> list = new ArrayList<>();
@@ -11,6 +16,7 @@ public class Utils {
         for (Puz[] puz : test) {
             list.addAll(Arrays.asList(puz));
         }
+        date= LocalDate.now();
     }
 
     private static   Puz[][] puzzles = {
@@ -51,6 +57,10 @@ public class Utils {
                 shift(n);
             }
         }
+        registration();
+    }
+
+    private void registration() {
     }
 
     private void restart() {
